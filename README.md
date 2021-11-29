@@ -50,4 +50,13 @@
          */
         String sql = "select * from tableName";
         List<Map<String, Object>> list = jdbcTemplate.queryForListMap(sql);
+        
+       /**
+         * 插入、删除、创建、查询...
+         */
+        sql = "create table table(id varchar(255) primary key ,name varchar(255))";
+        sql = "insert into tableName values('1','zs') ";
+        sql = "delete from tableName where id = '1'";
+        jdbcTemplate.execute(sql);
+        
 ```
