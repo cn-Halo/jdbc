@@ -1,14 +1,18 @@
-# jdbc template
+package io.github.halo.jdbc;
 
-## 学习spring jdbcTemplate实现
+import javax.sql.DataSource;
+import java.beans.PropertyVetoException;
+import java.util.List;
+import java.util.Map;
 
-## 设计模式
+/**
+ * @author yzm
+ * @date 2021/11/29 10:07
+ */
+public class Test {
 
-- 模版方法模式。
+    public static void main(String[] args) throws PropertyVetoException {
 
-## 使用
-
-```
         /**
          * 构建JdbcTemplate 方法一
          * 采用c3p0的ComboPooledDataSource来构建javax.sql.DataSource，然后传递给jdbcTemplate。
@@ -50,4 +54,6 @@
          */
         String sql = "select * from tableName";
         List<Map<String, Object>> list = jdbcTemplate.queryForListMap(sql);
-```
+
+    }
+}
